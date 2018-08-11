@@ -152,6 +152,11 @@ public final class String
     /** The value is used for character storage. */
     private final char value[];
 ```
+在Java 8中，value 不再使用 char 而用 byte 替代，这样一定程度上可以减少存储空间。Java中char是Unicode16编码，无论中英文都是2个字节。
+```
+@Stable
+    private final byte[] value;
+```
 
 ## 不可变的好处
 
